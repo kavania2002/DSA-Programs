@@ -10,11 +10,29 @@ class ListNode {
     }
 }
 
-class LLQueue {
+class MyLLQueue {
+
+    public static void main(String[] args) {
+        MyLLQueue q = new MyLLQueue();
+        q.enQueue(5);
+        q.enQueue(3);
+        if (q.isEmpty() == false) {
+            System.out.println(q.Front());
+        }
+        q.deQueue();
+        if (q.isEmpty() == false) {
+            System.out.println(q.Front());
+        }
+        q.deQueue();
+        if (q.isEmpty() == false) {
+            System.out.println(q.Front());
+        }
+    }
+
     int size = 0;
     ListNode head, tail;
 
-    public LLQueue() {
+    public MyLLQueue() {
         head = null;
         tail = null;
     }
@@ -46,24 +64,5 @@ class LLQueue {
 
     public boolean isEmpty() {
         return size == 0;
-    }
-}
-
-public class MyLLQueue {
-    public static void main(String[] args) {
-        LLQueue q = new LLQueue();
-        q.enQueue(5);
-        q.enQueue(3);
-        if (q.isEmpty() == false) {
-            System.out.println(q.Front());
-        }
-        q.deQueue();
-        if (q.isEmpty() == false) {
-            System.out.println(q.Front());
-        }
-        q.deQueue();
-        if (q.isEmpty() == false) {
-            System.out.println(q.Front());
-        }
     }
 }
